@@ -1,5 +1,5 @@
 data "aws_ami" "rhel" {
-  count = "${var.cloud_provider == "aws" ? 1 : 0}"
+  count       = "${var.cloud_provider == "aws" ? 1 : 0}"
   most_recent = true
 
   filter {

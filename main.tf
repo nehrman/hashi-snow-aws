@@ -2,10 +2,6 @@
 # AWS Configuration #
 #####################
 
-provider "aws" {
-  region = "${lookup(var.cloud_region, "aws")}"
-}
-
 resource "aws_vpc" "ec2_vpc" {
   count = "${var.cloud_provider == "aws" ? 1 : 0}"
 
